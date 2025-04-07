@@ -1,0 +1,23 @@
+---
+tf_build: "ansible01"
+terraform_working_dir: /tmp/srv/
+terraform_state: present
+operating_systems:
+  RHEL8:
+    _image_id_: 'ami-06142a3457991a4a8'
+  RHEL9:
+    _image_id_: 'ami-04f8d0dc7c0ac7a0e'
+vm_names: "{{ vm_name.split(',') }}"
+_region_: us-east-2
+vpc_name: "mbredeme terraform VPC"
+_vpc_cidr_block_: '11.0.0.0/16'
+igw_name: "Shadowman IGW"
+_subnet_cidr_: '11.0.1.0/24'
+subnet_name: "Shadowman Subnet"
+_route_table_name_: "Shadowman Route Table"
+destination_cidr_block: '0.0.0.0/0'
+_security_group_: "ShadowmanSG"
+_key_name_: "Shadowmankey"
+_instance_type_: "t2.micro"
+tf_build: "ansible01"
+terraform_working_dir: /tmp/srv/
